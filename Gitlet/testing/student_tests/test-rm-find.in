@@ -1,0 +1,52 @@
+> init
+<<<
++ wug.txt wug.txt
+> add wug.txt
+<<<
+> commit "added wug.txt"
+<<<
++ wug.txt notwug.txt
+> add wug.txt
+<<<
+> rm wug.txt
+<<<
+> commit "removed wug.txt"
+<<<
+* wug.txt
++ notwug.txt notwug.txt
+> add notwug.txt
+<<<
+> commit "added wug.txt"
+<<<
+D UID "[a-f0-9]+"
+D HEADER "commit (${UID})"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+> log
+===
+${HEADER}
+${DATE}
+added wug.txt
+
+===
+${HEADER}
+${DATE}
+removed wug.txt
+
+===
+${HEADER}
+${DATE}
+added wug.txt
+
+===
+${HEADER}
+${DATE}
+initial commit
+
+<<<*
+D UID3 "${1}"
+D UID1 "${3}"
+> find "added wug.txt"
+${UID1}
+${UID3}
+<<<*
+

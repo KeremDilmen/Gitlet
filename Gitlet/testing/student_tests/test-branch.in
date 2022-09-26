@@ -1,0 +1,76 @@
+> init
+<<<
++ wug.txt notwug.txt
+> add wug.txt
+<<<
+> commit "added notwug"
+<<<
++ wug.txt wug.txt
+> add wug.txt
+<<<
+> commit "added wug"
+<<<
+> branch cool-beans
+<<<
+> checkout cool-beans
+<<<
++ wug.txt notwug.txt
+> add wug.txt
+<<<
+> commit "added notwug to beans"
+<<<
+= wug.txt notwug.txt
+> status
+=== Branches ===
+\*cool-beans
+master
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<*
+> checkout master
+<<<
++ wug.txt opwug.txt
+> add wug.txt
+<<<
+> commit "added op to master"
+<<<
+= wug.txt opwug.txt
+> status
+=== Branches ===
+cool-beans
+\*master
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<*
+> rm-branch master
+Cannot remove the current branch.
+<<<*
+> rm-branch cool-beans
+<<<
+> status
+=== Branches ===
+\*master
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<*

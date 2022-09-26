@@ -1,0 +1,42 @@
+> init
+<<<
++ wug.txt wug.txt
+> add wug.txt
+<<<
+> commit "added wug"
+<<<
++ wug.txt notwug.txt
++ random.txt random.txt
+> add wug.txt
+<<<
+> add random.txt
+<<<
+> commit "added notwug and random"
+<<<
+= wug.txt notwug.txt
+D UID "[a-f0-9]+"
+D HEADER "commit (${UID})"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+> log
+===
+${HEADER}
+${DATE}
+added notwug and random
+
+===
+${HEADER}
+${DATE}
+added wug
+
+===
+${HEADER}
+${DATE}
+initial commit
+
+<<<*
+
+D UID1 "${2}"
+> reset ${UID1}
+<<<
+= wug.txt wug.txt
+* random.txt

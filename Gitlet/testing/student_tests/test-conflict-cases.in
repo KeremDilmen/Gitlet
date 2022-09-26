@@ -1,0 +1,32 @@
+I intro.inc
++ f.txt wug.txt
++ g.txt notwug.txt
+> add g.txt
+<<<
+> add f.txt
+<<<
+> commit "Two files"
+<<<
+> branch b1
+<<<
++ h.txt opwug.txt
+> add h.txt
+<<<
+> commit "Add h.txt"
+<<<
+> branch b2
+<<<
+> rm f.txt
+<<<
+> commit "remove f.txt"
+<<<
+> merge b1
+Given branch is an ancestor of the current branch.
+<<<
+> checkout b2
+<<<
+= f.txt wug.txt
+> merge master
+Current branch fast-forwarded.
+<<<
+* f.txt

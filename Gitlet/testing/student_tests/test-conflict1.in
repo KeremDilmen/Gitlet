@@ -1,0 +1,66 @@
+I intro.inc
++ f.txt wug.txt
++ g.txt notwug.txt
+> add g.txt
+<<<
+> add f.txt
+<<<
+> commit "Two files"
+<<<
+> branch other
+<<<
++ h.txt opwug.txt
+> add h.txt
+<<<
+> rm g.txt
+<<<
++ f.txt opwug.txt
+> add f.txt
+<<<
+> commit "Add h.txt, remove g.txt, and change f.txt"
+<<<
+> checkout other
+<<<
++ f.txt notwug.txt
+> add f.txt
+<<<
++ k.txt random.txt
+> add k.txt
+<<<
+> commit "Add k.txt and modify f.txt"
+<<<
+> checkout master
+<<<
+> log
+===
+${COMMIT_HEAD}
+${ARBLINES}
+<<<*
+D MASTER_HEAD "${1}"
+> merge other
+Encountered a merge conflict.
+<<<
+* g.txt
+= h.txt opwug.txt
+= k.txt random.txt
+= f.txt conflict1.txt
+> log
+${COMMIT_LOG}
+===
+commit ${MASTER_HEAD}
+${ARBLINES}
+<<<*
+> status
+=== Branches ===
+\*master
+other
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<*

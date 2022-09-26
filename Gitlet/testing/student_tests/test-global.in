@@ -1,0 +1,94 @@
+> init
+<<<
++ wug.txt notwug.txt
+> add wug.txt
+<<<
+> commit "added notwug"
+<<<
++ wug.txt wug.txt
+> add wug.txt
+<<<
+> commit "added wug"
+<<<
+> branch cool-beans
+<<<
+> checkout cool-beans
+<<<
++ wug.txt notwug.txt
+> add wug.txt
+<<<
+> commit "added notwug to beans"
+<<<
+= wug.txt notwug.txt
+> checkout master
+<<<
++ wug.txt opwug.txt
+> add wug.txt
+<<<
+> commit "added op to master"
+<<<
+= wug.txt opwug.txt
+> rm-branch cool-beans
+<<<
+> checkout cool-beans
+No such branch exists.
+<<<*
+D UID "[a-f0-9]+"
+D HEADER "commit (${UID})"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+> log
+===
+${HEADER}
+${DATE}
+added op to master
+
+===
+${HEADER}
+${DATE}
+added wug
+
+===
+${HEADER}
+${DATE}
+added notwug
+
+===
+${HEADER}
+${DATE}
+initial commit
+
+<<<*
+
+D UID3 "${1}"
+D UID2 "${2}"
+D UID1 "${3}"
+D UID0 "${4}"
+
+> global-log
+===
+${HEADER}
+${DATE}
+initial commit
+
+===
+${HEADER}
+${DATE}
+added notwug
+
+===
+${HEADER}
+${DATE}
+added wug
+
+===
+${HEADER}
+${DATE}
+added notwug to beans
+
+===
+${HEADER}
+${DATE}
+added op to master
+
+<<<*
+
