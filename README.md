@@ -29,7 +29,3 @@ This project is a simplified version of Git, implemented in Java, called Gitlet.
 ## Getting Started
 
 To compile and run the project, use the provided `Makefile`. Run the unit tests in the `testing` directory to verify the implementation.
-
-## License
-
-This project is open-source and available under the MIT License.
